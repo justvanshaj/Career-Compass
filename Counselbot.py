@@ -19,20 +19,20 @@ def image_to_byte_array(image: Image) -> bytes:
 API_KEY = os.environ.get("AIzaSyCPlu3JJT2sw3PCQFpKvs_LB-zxS_mnhqo")
 genai.configure(api_key="AIzaSyCPlu3JJT2sw3PCQFpKvs_LB-zxS_mnhqo")
 
-st.image("./Counsel00.png", width=500)
+st.image("./Counsel.png", width=500)
 st.write("")
 
 gemini_pro, gemini_vision = st.tabs(["Gemini Pro", "Gemini Pro Vision"])
 
 def main():
     with gemini_pro:
-        st.header("Interact with Gemini Pro")
+        st.header("Textual Counselling")
         st.write("")
 
-        prompt = st.text_input("prompt please...", placeholder="Prompt", label_visibility="visible")
+        prompt = st.text_input("Please begin with a prompt with details as much as possible", placeholder="Prompt", label_visibility="visible")
         model = genai.GenerativeModel("gemini-pro")
 
-        if st.button("SEND",use_container_width=True):
+        if st.button("Hit to Counsel",use_container_width=True):
             response = model.generate_content(prompt)
 
             st.write("")
@@ -42,10 +42,10 @@ def main():
             st.markdown(response.text)
 
     with gemini_vision:
-        st.header("Interact with Gemini Pro Vision")
+        st.header("Visual Counselling")
         st.write("")
 
-        image_prompt = st.text_input("Interact with the Image", placeholder="Prompt", label_visibility="visible")
+        image_prompt = st.text_input("Upload your Details (PDF/JPG)", placeholder="Prompt", label_visibility="visible")
         uploaded_file = st.file_uploader("Choose and Image", accept_multiple_files=False, type=["png", "jpg", "jpeg", "img", "webp"])
 
         if uploaded_file is not None:
@@ -59,7 +59,7 @@ def main():
                 </style>
                 """, unsafe_allow_html=True)
             
-        if st.button("GET RESPONSE", use_container_width=True):
+        if st.button("Hit to Counsel", use_container_width=True):
             model = genai.GenerativeModel("gemini-pro-vision")
 
             if uploaded_file is not None:
