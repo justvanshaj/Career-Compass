@@ -16,11 +16,11 @@
 
 ## Get Started:
 
-1. **Install Dependencies:**
+1. **To Install Necessary Model Required:**
     ```bash
     pip install -r alluneed.txt
     ```
-1. **Install Dependencies:**
+1. **To Run Project:**
     ```bash
     streamlit run Counselbot.py
     ```
