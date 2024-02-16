@@ -19,14 +19,14 @@ def image_to_byte_array(image: Image) -> bytes:
 API_KEY = os.environ.get("AIzaSyCPlu3JJT2sw3PCQFpKvs_LB-zxS_mnhqo")
 genai.configure(api_key="AIzaSyCPlu3JJT2sw3PCQFpKvs_LB-zxS_mnhqo")
 
-st.image("./Banner.png", width=500)
+st.image("./Counsel00.png", width=500)
 st.write("")
 
 gemini_pro, gemini_vision = st.tabs(["Gemini Pro", "Gemini Pro Vision"])
 
 def main():
     with gemini_pro:
-        st.header("Interact using Textual Prompt")
+        st.header("Interact with Gemini Pro")
         st.write("")
 
         prompt = st.text_input("prompt please...", placeholder="Prompt", label_visibility="visible")
@@ -42,7 +42,7 @@ def main():
             st.markdown(response.text)
 
     with gemini_vision:
-        st.header("Interact using Visual Prompt")
+        st.header("Interact with Gemini Pro Vision")
         st.write("")
 
         image_prompt = st.text_input("Interact with the Image", placeholder="Prompt", label_visibility="visible")
