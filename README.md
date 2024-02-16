@@ -1,4 +1,4 @@
-# AI Chat Bot & Visual Magic Explosion! by Vanshaj Bhardwaj 🚀🎨🤖👁️
+# Career Compass by Vanshaj Bhardwaj 🚀🎨🤖👁️
 
 ## What's Inside:
 
