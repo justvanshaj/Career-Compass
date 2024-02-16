@@ -26,7 +26,7 @@ gemini_pro, gemini_vision = st.tabs(["Gemini Pro", "Gemini Pro Vision"])
 
 def main():
     with gemini_pro:
-        st.header("Interact with Gemini Pro")
+        st.header("Interact using Textual Prompt")
         st.write("")
 
         prompt = st.text_input("prompt please...", placeholder="Prompt", label_visibility="visible")
@@ -42,7 +42,7 @@ def main():
             st.markdown(response.text)
 
     with gemini_vision:
-        st.header("Interact with Gemini Pro Vision")
+        st.header("Interact using Visual Prompt")
         st.write("")
 
         image_prompt = st.text_input("Interact with the Image", placeholder="Prompt", label_visibility="visible")
