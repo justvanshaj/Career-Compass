@@ -20,8 +20,7 @@
     ```bash
     pip install -r alluneed.txt
     ```
-    
-2. **Run the Code:**
- ```bash
- streamlit run Counselbot.py
-```
+1. **Install Dependencies:**
+    ```bash
+    streamlit run Counselbot.py
+    ```
